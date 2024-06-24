@@ -12,7 +12,6 @@ const Slider: React.FC<SliderProps> = ({ value, onChange }) => {
 
   return (
     <div className="w-full relative">
-      {/* Slider container */}
       <div className="relative w-[90%] mx-auto">
         <input
           type="range"
@@ -22,7 +21,6 @@ const Slider: React.FC<SliderProps> = ({ value, onChange }) => {
           onChange={handleSliderChange}
           className="w-full appearance-none slider-thumb relative z-10"
         />
-        {/* Custom dots on slider */}
         <div className="absolute top-0 left-0 w-full h-full flex justify-between items-center pointer-events-none z-0">
           {[...Array(5)].map((_, index) => (
             <div
@@ -39,7 +37,7 @@ const Slider: React.FC<SliderProps> = ({ value, onChange }) => {
         </div>
       </div>
       <div className="flex justify-between text-sm mt-2">
-        <span></span> {/* Placeholder for "Empty" */}
+        <span></span>
         <span>Strongly Disagree</span>
         <span>Disagree</span>
         <span>Neutral</span>

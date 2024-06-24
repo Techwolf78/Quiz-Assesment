@@ -9,6 +9,14 @@ function App() {
   const totalQuestions = 5;
   const progress = (currentQuestion / totalQuestions) * 100;
 
+  const questions = [
+    "I have ambitious aims of making a difference.",
+    "I often think about how my actions affect others.",
+    "I am confident in my ability to achieve my goals.",
+    "With hard work and determination, I have been able to persevere<br>through the ministry challenges that have come my way.",
+    "I value collaboration and teamwork.",
+  ];
+
   useEffect(() => {
     localStorage.removeItem("sliderValues");
   }, []);
@@ -75,11 +83,13 @@ function App() {
             </span>
           </div>
         </div>
-        <div className="text-center text-gray-500 mb-4">
+        <div className="text-center text-red-500 text-lg font-semibold mb-4">
           {currentQuestion}/{totalQuestions}
         </div>
-        <div className="text-center text-lg font-semibold mb-20">
-          I have ambitious aims of making a difference.
+        <div className="text-center text-lg font-semibold mb-20 break-words">
+          <span
+            dangerouslySetInnerHTML={{ __html: questions[currentQuestion - 1] }}
+          ></span>
         </div>
         <Slider
           value={sliderValues[currentQuestion - 1]}
