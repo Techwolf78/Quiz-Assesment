@@ -38,15 +38,14 @@ function App() {
     updatedSliderValues[currentQuestion - 1] = value;
     setSliderValues(updatedSliderValues);
 
-    setTimeout(() => {
-      if (value !== 0) {
+    if (value !== 0) {
+      setTimeout(() => {
         handleNext();
-
         setSliderValues((prev) =>
           prev.map((v, i) => (i === currentQuestion ? 0 : v))
         );
-      }
-    }, 500);
+      }, 500);
+    }
   };
 
   return (
@@ -99,7 +98,11 @@ function App() {
           <button className="text-teal-500" onClick={handlePrev}>
             &larr; PREV
           </button>
-          <button className="text-teal-500" onClick={handleNext}>
+          <button
+            className={`text-teal-500 ${sliderValues[currentQuestion - 1] === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+            onClick={handleNext}
+            disabled={sliderValues[currentQuestion - 1] === 0}
+          >
             NEXT &rarr;
           </button>
         </div>
