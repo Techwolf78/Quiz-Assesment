@@ -1,17 +1,16 @@
-import { useState, useEffect } from 'react';
-import Slider from './components/Slider';
-import Header from './components/Header';
+import { useState, useEffect } from "react";
+import Slider from "./components/Slider";
+import Header from "./components/Header";
 
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(1);
-  const [sliderValues, setSliderValues] = useState(new Array(5).fill(0)); // Default to "Empty"
+  const [sliderValues, setSliderValues] = useState(new Array(5).fill(0));
 
   const totalQuestions = 5;
   const progress = (currentQuestion / totalQuestions) * 100;
 
   useEffect(() => {
-    // Clear local storage on component mount
-    localStorage.removeItem('sliderValues');
+    localStorage.removeItem("sliderValues");
   }, []);
 
   const handlePrev = () => {
@@ -34,8 +33,8 @@ function App() {
     setTimeout(() => {
       if (value !== 0) {
         handleNext();
-        // Reset the slider to the empty position for the next question
-        setSliderValues((prev) => 
+
+        setSliderValues((prev) =>
           prev.map((v, i) => (i === currentQuestion ? 0 : v))
         );
       }
@@ -57,23 +56,22 @@ function App() {
               IDEALISTIC
             </span>
           </div>
-          {/* Dummy progress bars */}
           <div className="relative w-1/4 ml-6">
             <div className="absolute top-0 left-0 h-1.5 bg-gray-300 w-full rounded"></div>
             <span className="block mt-4 text-gray-500 text-xl font-bold text-center">
-            DISILLUSIONED
+              DISILLUSIONED
             </span>
           </div>
           <div className="relative w-1/4 ml-6">
             <div className="absolute top-0 left-0 h-1.5 bg-gray-300 w-full rounded"></div>
             <span className="block mt-4 text-gray-500 text-xl font-bold text-center">
-            CYNICAL
+              CYNICAL
             </span>
           </div>
           <div className="relative w-1/4 ml-6">
             <div className="absolute top-0 left-0 h-1.5 bg-gray-300 w-full rounded"></div>
             <span className="block mt-4 text-gray-500 text-xl font-bold text-center">
-            HOPEFUL
+              HOPEFUL
             </span>
           </div>
         </div>

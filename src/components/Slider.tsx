@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 type SliderProps = {
   value: number;
@@ -29,10 +29,10 @@ const Slider: React.FC<SliderProps> = ({ value, onChange }) => {
               key={index}
               className="h-3 w-3 bg-teal-500 rounded-full"
               style={{
-                position: 'absolute',
+                position: "absolute",
                 left: `${(index + 1) * 20}%`,
-                transform: 'translate(-50%, -50%)',
-                top: '50%',
+                transform: "translate(-50%, -50%)",
+                top: "50%",
               }}
             ></div>
           ))}
