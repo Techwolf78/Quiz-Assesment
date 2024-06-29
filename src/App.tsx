@@ -51,41 +51,41 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-blue-100">
       <Header />
-      <div className="bg-white rounded-lg shadow-lg p-10 max-w-5xl w-full">
-        <div className="flex justify-center mb-20">
-          <div className="relative w-1/4">
+      <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-10 max-w-md sm:max-w-lg lg:max-w-5xl w-full">
+        <div className="flex flex-col sm:flex-row justify-center mb-10 lg:mb-20">
+          <div className="relative w-full sm:w-1/4 mb-4 sm:mb-0">
             <div
               className="absolute top-0 z-10 left-0 h-1.5 bg-teal-500 rounded"
               style={{ width: `${progress}%` }}
             ></div>
             <div className="absolute top-0 left-0 h-1.5 bg-gray-300 w-full rounded"></div>
-            <span className="block mt-4 text-teal-500 text-xl font-bold text-center">
+            <span className="block mt-4 text-teal-500 text-sm sm:text-lg lg:text-xl font-bold text-center">
               IDEALISTIC
             </span>
           </div>
-          <div className="relative w-1/4 ml-6">
+          <div className="relative w-full sm:w-1/4 mb-4 sm:mb-0 sm:ml-6">
             <div className="absolute top-0 left-0 h-1.5 bg-gray-300 w-full rounded"></div>
-            <span className="block mt-4 text-gray-500 text-xl font-bold text-center">
+            <span className="block mt-4 text-gray-500 text-sm sm:text-lg lg:text-xl font-bold text-center">
               DISILLUSIONED
             </span>
           </div>
-          <div className="relative w-1/4 ml-6">
+          <div className="relative w-full sm:w-1/4 mb-4 sm:mb-0 sm:ml-6">
             <div className="absolute top-0 left-0 h-1.5 bg-gray-300 w-full rounded"></div>
-            <span className="block mt-4 text-gray-500 text-xl font-bold text-center">
+            <span className="block mt-4 text-gray-500 text-sm sm:text-lg lg:text-xl font-bold text-center">
               CYNICAL
             </span>
           </div>
-          <div className="relative w-1/4 ml-6">
+          <div className="relative w-full sm:w-1/4 mb-4 sm:mb-0 sm:ml-6">
             <div className="absolute top-0 left-0 h-1.5 bg-gray-300 w-full rounded"></div>
-            <span className="block mt-4 text-gray-500 text-xl font-bold text-center">
+            <span className="block mt-4 text-gray-500 text-sm sm:text-lg lg:text-xl font-bold text-center">
               HOPEFUL
             </span>
           </div>
         </div>
-        <div className="text-center text-red-500 text-lg font-semibold mb-4">
+        <div className="text-center text-red-500 text-sm sm:text-lg font-semibold mb-4">
           {currentQuestion}/{totalQuestions}
         </div>
-        <div className="text-center text-lg font-semibold mb-20 break-words">
+        <div className="text-center text-sm sm:text-lg font-semibold mb-10 lg:mb-20 break-words">
           <span
             dangerouslySetInnerHTML={{ __html: questions[currentQuestion - 1] }}
           ></span>
@@ -94,7 +94,7 @@ function App() {
           value={sliderValues[currentQuestion - 1]}
           onChange={handleSliderChange}
         />
-        <div className="flex justify-between mt-20">
+        <div className="flex justify-between mt-10 lg:mt-20">
           <button className="text-teal-500" onClick={handlePrev}>
             &larr; PREV
           </button>

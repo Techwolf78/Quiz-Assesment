@@ -36,7 +36,7 @@ const Slider: React.FC<SliderProps> = ({ value, onChange }) => {
           ))}
         </div>
       </div>
-      <div className="flex justify-between text-sm mt-2">
+      <div className="flex justify-between text-xs sm:text-sm mt-2">
         <span></span>
         <span><b>Strongly Disagree</b></span>
         <span><b>Disagree</b></span>
