@@ -35,6 +35,8 @@
   cursor: pointer;
   position: relative;
   z-index: 10;
+  margin-top: -5px; /* Adjust to position thumb slightly above */
+  transition: left 0.3s ease-in-out;
 }
 
 .slider-thumb::-moz-range-thumb {
@@ -45,4 +47,27 @@
   cursor: pointer;
   position: relative;
   z-index: 10;
+  margin-top: -5px; /* Adjust to position thumb slightly above */
+  transition: left 0.3s ease-in-out;
+}
+
+.slider-labels span {
+  padding: 2px 4px;
+  background: #ffffff;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+@media (max-width: 640px) {
+  .slider-labels span {
+    font-size: 10px;
+    padding: 1px 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-labels span {
+    font-size: 12px;
+    padding: 2px 3px;
+  }
 }

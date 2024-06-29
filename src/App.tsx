@@ -49,7 +49,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-blue-100">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-blue-100 pt-24 sm:pt-28 lg:pt-32">
       <Header />
       <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-10 max-w-md sm:max-w-lg lg:max-w-5xl w-full">
         <div className="flex flex-col sm:flex-row justify-center mb-10 lg:mb-20">
@@ -112,3 +112,4 @@ function App() {
 }
 
 export default App;
+
